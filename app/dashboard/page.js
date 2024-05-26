@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -59,17 +59,17 @@ const AdminDashboard = () => {
   }
 
   return (
-    <>
+    <div className={styles.parentContainer}>
       <div className={styles.pesuLogoContainer}>
         <Image src={PESUimg} alt="PES University" />
       </div>
 
-      <div className={styles.headerContainer}>
-        <h1>Admin Dashboard</h1>
-        <div className={styles.signOutBtn}>
+      <div className={styles.signOutBtn}>
           <button onClick={() => signOut({ callbackUrl: '/' })}>Sign Out</button>
-        </div>
-        <h2>New Orders</h2>
+      </div>
+
+      <div className={styles.dashHeader}>
+        <h2>Your Orders</h2>
       </div>
 
       <div className={styles.ordersContainer}>
@@ -94,7 +94,7 @@ const AdminDashboard = () => {
           ))
         )}
       </div>
-    </>
+    </div>
   );
 };
 

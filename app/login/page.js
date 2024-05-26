@@ -1,13 +1,12 @@
+'use client';
 import styles from '../../styles/admin.module.css';
-import { options } from '../api/auth/[...nextauth]/options';
-import { getServerSession } from 'next-auth/next';
 import { signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
 import Image from 'next/image';
 import PESUimg from '../../public/images/title.png';
 
-export default async function LoginForm() {
-  const session = await getServerSession(options);
+export default function LoginForm() {
+  const { data: session, status } = useSession();
 
   return (
     <>
