@@ -1,13 +1,11 @@
-'use client';
+"use client"
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
+import Image from "next/image";
+import PESUimg from "../../public/images/title.png";
 import Link from 'next/link';
-import { useSession, signOut } from 'next-auth/react';
-import PESUimg from '../../public/images/title.png';
-import styles from '../../styles/admin.module.css';
+import styles from "../../styles/admin.module.css";
 
 const AdminDashboard = () => {
-  const { data: session, status } = useSession();
   const [orders, setOrders] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -50,31 +48,27 @@ const AdminDashboard = () => {
     }
   };
 
-  if (status === 'loading') {
+  if (isLoading) {
     return <div>Loading...</div>;
-  }
-
-  if (status === 'unauthenticated') {
-    return <div>Please sign in</div>;
   }
 
   return (
     <div className={styles.parentContainer}>
       <div className={styles.pesuLogoContainer}>
-        <Image src={PESUimg} alt="PES University" />
+        <Image src={PESUimg} alt={"PES University"} />
       </div>
 
-      <div className={styles.signOutBtn}>
-          <button onClick={() => signOut({ callbackUrl: '/' })}>Sign Out</button>
-      </div>
+        <div className={styles.signOutBtn}>
+          <Link href="/api/auth/signout">Sign Out</Link>
+        </div>
 
-      <div className={styles.dashHeader}>
-        <h2>Your Orders</h2>
-      </div>
+        <div className={styles.dashHeader}>
+          <h2>Your orders</h2>
+        </div>
 
       <div className={styles.ordersContainer}>
         {orders.length === 0 ? (
-          <p>No new orders</p>
+          <p className={styles.noOrders}>No new orders</p>
         ) : (
           orders.map((order) => (
             <div key={order._id} className={styles.order}>
@@ -82,13 +76,13 @@ const AdminDashboard = () => {
               <ul>
                 {order.items.map((item) => (
                   <li key={item.itemId}>
-                    <p>{item.name}</p>
+                    <p className={styles.orderName}>{item.name}</p>
                     <p>Quantity: {item.quantity}</p>
                     <p>Price: ₹{item.price}</p>
                   </li>
                 ))}
               </ul>
-              <p>Total Amount: ₹{order.totalAmount}</p>
+              <p className={styles.amount}>Total Amount: ₹{order.totalAmount}</p>
               <button className={styles.doneBtn} onClick={() => handleDeleteOrder(order._id)}>Done</button>
             </div>
           ))
