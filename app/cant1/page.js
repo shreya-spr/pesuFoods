@@ -147,9 +147,8 @@ const CartPage = ({ selectedItems, groupedItems }) => {
   console.log("Grouped Items:", groupedItems);
 
   const handleCheckout = async () => {
-    console.log("checkout button is clicked, now post the orders to mongodb")
+    console.log("checkout button clicked now");
     try {
-      // Create a detailed order object
       const orderItems = Object.entries(selectedItems).map(([itemId, quantity]) => {
         const cuisineGroup = Object.values(items).find((cuisineItems) =>
           cuisineItems.some((item) => item._id === itemId)
@@ -163,7 +162,7 @@ const CartPage = ({ selectedItems, groupedItems }) => {
               itemId: item._id,
               name: item.name,
               quantity: quantity,
-              price: item.price * quantity
+              price: item.price * quantity,
             };
           }
         }
@@ -175,30 +174,30 @@ const CartPage = ({ selectedItems, groupedItems }) => {
       const order = {
         items: orderItems,
         totalAmount: totalAmount,
-        createdAt: new Date()
+        createdAt: new Date(),
       };
   
-      // Send the detailed order object to the API
       const response = await fetch('/api/orders', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         },
-        body: JSON.stringify(order)
+        body: JSON.stringify(order),
       });
   
       if (response.ok) {
         const data = await response.json();
         console.log('Order saved:', data);
-        // Optionally, you can clear the cart or show a success message
-        router.push('/success'); 
+        router.push('/success');  
       } else {
-        console.error('Failed to save the order');
+        const errorData = await response.json();
+        console.error('Failed to save the order:', errorData);
       }
     } catch (error) {
       console.error('An error occurred while saving the order:', error);
     }
   };
+  
   
 
   // Calculate total amount
