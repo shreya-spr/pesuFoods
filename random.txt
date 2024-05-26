@@ -1,0 +1,25 @@
+usernew
+pesuDB
+
+
+// to create Index - do it inside mongoDB compass shell
+db.foodItems.createIndex({name:"text", price:"text"})
+
+
+Goal for the Admin part:
+- Login and logout functionality
+- In the dashboard, the admin must be able to see :
+    - the order deets placed by the customers 
+        - so once the user clicks on checkout, the details must get added to 'orders' doc
+    - Must be able to update status of order to "Done" once the food is served
+
+
+
+
+    - When user adds items to the cart and proceeds to checkout (clicks on Checkout button), then: add that data to the 'orders' collection in database. Include the canteen name say, parkingLot
+    - Then when you log in as an admin: In your dashboard just do GET request to show all pending orders. 
+    - Add an option to mark it as done, that would then delete it from the database.
+
+Add environment variables
+
+RUN using: `npm run dev`

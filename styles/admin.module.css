@@ -1,0 +1,158 @@
+.headerContainer {
+    display: flex;
+    align-items: center; /* Centers children vertically */
+    justify-content: center; /* Centers children horizontally */
+    width: 100%;
+    height: 100vh; 
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 2%;
+    font-size: large;
+    margin: 0;
+}
+
+.header > h2 {
+    margin-top: 1.5%;
+    font-size: 3rem;
+}
+
+.header > p {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.6rem;   
+    margin-top: auto;
+}
+
+.pesuLogoContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.pesuLogoContainer img {
+    width: 50%;
+    height: 50%;
+}
+
+.dashboardBtn {
+    display: inline-flex; /* Allows us to center content easily */
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    background-color: #007BFF; 
+    color: white; 
+    border: none;
+    border-radius: 25px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+    width: fit-content;
+    padding: 12px 24px; 
+    font-weight: bold;
+    font-size: 18px; 
+    cursor: pointer; 
+    text-decoration: none; 
+    margin: auto; /* Centers the button */
+}
+
+.dashboardBtn:hover {
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+}
+
+
+/* Dashboard elements */
+.parentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.dashHeader {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 10%;
+    padding-left: 3%;
+    font-size: 150%;
+}
+
+.signOutBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: #F66B46;
+    border: none;
+    width: fit-content;
+    border-radius: 25px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+    padding: 10px 20px; 
+    color: white;
+    cursor: pointer; 
+}
+
+.signOutBtn:hover {
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+}
+
+.ordersContainer {
+    width: 100%;
+    background-color: #cae8ff1b;
+    border-radius: 20px;
+}
+
+.order {
+    padding-left: 2.8%;
+    padding-bottom: 2.8%;
+}
+
+.order > ul {
+    font-size: larger;
+}
+
+.orderName {
+    font-weight: bold;
+    font-size: 120%;
+}
+
+.amount {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.noOrders {
+    padding: 1%;
+    font-size: large;
+}
+
+.doneBtn {
+    background-color: #28a745;
+    border: none;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    font-size: large;
+    margin: 4px 2px;
+    cursor: pointer;
+    padding: 10px 24px;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    border-radius: 12px;
+}
+
+.doneBtn:hover {
+    transform: translateY(-2px); 
+    background-color: #20c997;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}

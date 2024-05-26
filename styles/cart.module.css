@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    color: white;
+    flex-direction: column;
+}
+
+.pesuLogoImg {
+    position: absolute;
+    width: 20%;
+    height: auto;
+    top: 0.5%;
+    left: 0;
+  }

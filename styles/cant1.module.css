@@ -1,0 +1,452 @@
+  .menu {
+    display: flex;
+    color: white;
+    flex-direction: column;
+  }
+  
+  .pesuLogoImg {
+    position: absolute;
+    width: 20%;
+    height: auto;
+    top: 0.5%;
+    left: 0;
+  }
+  
+  .cafeteriaInfo {
+    padding-left: 1.5%;
+    padding-top: 3%;
+  }
+  
+  .cafeteriaInfoH1 {
+    font-size: 350%;
+    width: fit-content;
+    margin: 0%;
+    margin-top: 1.2%;
+  }
+  
+  .locationText {
+    font-size: large;
+    font-family: "Sanchez";
+    margin: 0%;
+    margin-top: 0.3%;
+    margin-left: 0.8%;
+    color: #cae8ff;
+  }
+  
+  .map {
+    font-size: large;
+    font-family: "Sanchez"; /*--*/
+    display: flex;
+    align-items: center;
+    margin: 0%;
+    margin-left: 0.8%;
+  }
+  
+  .mapA {
+    color: #cae8ffb5;
+    margin-top: 0.3%;
+    margin-right: 0.5%;
+  }
+  
+  .mapImg {
+    width: 1.3%;
+    margin-top: 0.3%;
+  }
+  
+  .cafeteriaInfo1 {
+    margin: 0.4%;
+    font-size: large;
+    width: fit-content;
+    margin-left: 0.8%;
+    color: #cae8ff;
+    display: flex;
+    flex-direction: row;
+    font-family: "Sanchez"; /*--*/
+    align-items: center; /*--*/
+    margin-bottom: 0.6%;
+  }
+  
+  .cafeteriaInfo1P {
+    margin: 0%;
+    margin-top: 0.5%;
+    white-space: pre;
+  }
+  
+  .cafeteriaInfo1Img {
+    width: 6%;
+    height: 3%;
+  }
+  
+  .container {
+    position: absolute;
+    top: 0;
+    right: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 10.5%;
+    width: 22%;
+  }
+  
+  .searchToggle {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+  
+  .search {
+    padding: 2.8%;
+    width: 100%;
+    margin-bottom: 3%;
+    margin-right: 2%;
+    border-radius: 40px;
+  }
+  
+  .input {
+    border: none;
+    display: inline-block;
+    box-sizing: border-box;
+  }
+  
+  .input::placeholder {
+    padding-left: 4%;
+  }
+  
+  .focus {
+    outline-color: rgba(9, 9, 85, 0.601);
+  }
+  
+  .toggleLabel {
+    position: relative;
+    display: inline-block;
+    width: 3rem;
+    height: 1.2rem;
+    margin-right: 0.7rem;
+  }
+  
+  .toggleLabelInput {
+    display: none;
+  }
+  
+  .toggleSlider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    border-radius: 34px;
+    background-color: grey;
+    transition: background-color 0.2s;
+  }
+  
+  .toggleSlider:before {
+    position: absolute;
+    content: "";
+    height: 75%;
+    width: 30%;
+    left: 0.2em;
+    bottom: 0.15em;
+    top: 0.15em;
+    border-radius: 50%;
+    transition: transform 0.2s;
+  }
+  
+  /* Update the class names for the toggle buttons */
+  /* Correct class names for the vegToggle */
+  .vegToggle + .toggleSlider:before {
+    background-color: lightgreen;
+  }
+  
+  .vegToggle:checked + .toggleSlider {
+    background-color: green;
+  }
+  
+  .vegToggle:checked + .toggleSlider:before {
+    transform: translateX(1.65em);
+  }
+  
+  /* Correct class names for the nonvegToggle */
+  .nonvegToggle + .toggleSlider:before {
+    background-color: coral;
+  }
+  
+  .nonvegToggle:checked + .toggleSlider {
+    background-color: red;
+  }
+  
+  .nonvegToggle:checked + .toggleSlider:before {
+    transform: translateX(1.65em);
+  }
+  
+  .dropdown {
+    margin: 1.5%;
+    margin-bottom: 0%;
+    background-color: #cae8ff1b;
+    border-radius: 20px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 1%;
+    padding-left: 2%;
+    font-size: 190%;
+    font-weight: bold;
+  }
+  
+  .arrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 9px 9px 0 9px; /* Increase the border-width to make the arrow bigger */
+    border-color: #ffffffcc transparent transparent transparent;
+    margin-left: 5px;
+    margin-right: 2.5%;
+  }
+  
+  .items {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2.8%;
+  }
+  
+  .item {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1.5%;
+  }
+  
+  .itemImg {
+    width: 11%;
+    padding-right: 5%;
+  }
+  
+  .details {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+  
+  .name {
+    font-weight: 500;
+    font-size: 130%;
+  }
+  
+  .price {
+    margin-top: 0.3%;
+    margin-left: 2%;
+    font-size: 120%;
+    color: #dfeaee;
+  }
+  
+  .addButtonContainer {
+    display: flex;
+    align-items: center;
+    padding-right: 5%;
+    justify-content: space-between;
+  }
+  
+  .addButton {
+    background-color: #F66B46;
+    border: none;
+    width: 9%;
+    border-radius: 15px;
+    font-size: 120%;
+    font-weight: 600;
+    padding: 0.6%;
+    color: white;
+  }
+  
+  .quantityButtons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F66B46;
+    width: 8.5%;
+    border-radius: 15px;
+    font-size: 140%;
+    font-weight: 550;
+    padding: 0.3%;
+  }
+  
+  .quantityButton {
+    border-radius: 15px;
+    background-color: #F66B46;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-size: 100%;
+    font-weight: 500;
+  }
+
+  .cartButton {
+    position: fixed;
+    bottom: 4%;
+    right: 4%;
+    background-color: #061321;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .cartPopup {
+    color: black;
+    position: fixed;
+    bottom: 10%; 
+    right: 10%;
+    background-color: #fefefffe;
+    /* border: 1px solid #ccc; */
+    border-radius: 5px;
+    padding: 2%;
+    height: 60%;
+    width: 35%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-height: 80vh; 
+    overflow-y: auto;
+  }
+
+  .cart-page h2 {
+    text-align: center;
+    font-size: large;
+  }
+  
+  .cartItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5%;
+  }
+  
+  .itemImage {
+    margin-left: 8%;
+  }
+  
+  .itemDetails {
+    flex: 1;
+    text-align: center;
+  }
+
+  .totalAmount {
+    margin-top: 3%;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+  }
+  
+  .checkoutBtn {
+    display: inline-flex; /* Allows us to center content easily */
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    background-color: #007BFF; 
+    color: white; 
+    border: none;
+    border-radius: 25px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+    width: fit-content;
+    padding: 12px 24px; 
+    font-weight: bold;
+    font-size: 18px; 
+    cursor: pointer; 
+    text-decoration: none; 
+    margin: auto; /* Centers the button */
+}
+
+.checkoutBtn:hover {
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+}
+  
+  
+  @media screen and (max-width: 600px) {
+    .pesuLogoImg {
+      width: 45%;
+    }
+    .cafeteriaInfo {
+      padding-left: 0.5%;
+      padding-top: 8.5%;
+    }
+    .locationText {
+      margin-left: 2%;
+    }
+    .map {
+      margin-left: 2%;
+    }
+    .cafeteriaInfo1 {
+      margin-left: 2%;
+    }
+    .container {
+      position: static;
+      margin-top: 0.5%;
+      width: 85%;
+      padding-inline-start: 17%;
+    }
+    .searchToggle {
+      width: 100%;
+    }
+    .search {
+      margin: 1% 5%;
+      padding: 2%; /*--*/
+    }
+    .toggleButtons {
+      padding-right: 4%;
+      padding-top: 1%;
+    }
+    .mapImg {
+      width: 3%; /* Adjust width for better visibility on mobile */
+      margin-left: 1%; /* Adjust margin for spacing */
+    }
+    .dropdown {
+      margin-bottom: 1%;
+    }
+    .header {
+      font-size: 180%;
+      padding: 1.5%;
+      padding-left: 3.5%;
+    }
+    .arrow {
+      margin-right: 4%;
+    }
+    .items {
+      padding-left: 3.5%;
+    }
+    .item {
+      padding-bottom: 3%;
+    }
+    .itemImg {
+      width: 25%;
+      padding-right: 4%;
+    }
+    .details {
+      width: 70%;
+    }
+    .name {
+      font-size: 125%;
+    }
+    .price {
+      font-size: 115%;
+    }
+    .addButtonContainer {
+      padding-right: 3%;
+    }
+    .addButton {
+      width: 25%;
+      font-size: 110%;
+      padding: 1.3%;
+    }
+    .quantityButtons {
+      width: 24%;
+      border-radius: 20px;
+      font-size: 120%;
+      padding: 0.4%;
+    }
+    .quantityButton {
+      border-radius: 55px;
+    }
+  }

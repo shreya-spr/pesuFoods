@@ -1,0 +1,157 @@
+.mainContainer {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+  
+.headerContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.pesuLogoContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+.pesuLogoContainer img {
+    width: 50%;
+    height: 50%;
+}
+  
+#header {
+    display: flex;
+    flex-direction: column;
+    margin-left: 12%;
+    color: white;
+    padding: 2%;
+    font-size: 280%;
+}
+
+
+.loginRedirect {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1rem;
+    text-align: center;
+    background-color: #F66B46;
+    border: none;
+    width: 5%;
+    border-radius: 15px;
+    font-weight: 600;
+    padding: 0.76%;
+    color: white;
+}
+  
+
+.FoodImgContainer {
+    
+    flex: 1;
+    align-items: flex-end;
+    text-align: right;
+    margin-right: 10%;
+}
+
+#header > button {
+    background-color: aqua;
+    border: none;
+    cursor: pointer;
+    padding: 3.2%;
+    border-radius: 1.5em;
+    font-weight: 700;
+    font-size: medium;
+    transition: all 0.5s;
+    margin-top: 0%;
+}
+  
+#header > button:hover {
+    background-color: rgb(24, 186, 186);
+}
+
+
+/* Login form styles */
+.loginContainer {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.loginFormContainer {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    border-top-width: 4px;
+    border-color: #48bb78;
+}
+
+.formHeader {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.loginBtn {
+    background-color: #F66B46;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0.5rem 1.5rem;
+    font-size: 0.875rem;
+}
+
+.errorMsg {
+    background-color: #ef4444;
+    width: fit-content;
+    font-size: 0.875rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+}
+
+.registerRedirect {
+    font-size: 0.875rem;
+    margin-top: 0.75rem;
+    text-align: right;
+}
+
+.registerRedirect > span {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+    .headerContainer {
+        flex-direction: column;
+        height: unset;
+    }
+
+    #header {
+        margin: 0%;
+        margin-top: 20%;
+        align-items: center;
+        font-size: 220%;
+    }
+
+    #header > button {
+        padding: 3.2% 33%;
+    }
+
+    .FoodImgContainer {
+        margin-right: 0%;
+        text-align: center;
+    }
+
+    .FoodImgContainer img {
+        width:90%;
+    }
+
+}
