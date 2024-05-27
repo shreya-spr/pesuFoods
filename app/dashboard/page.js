@@ -1,7 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import Image from "next/image";
-import PESUimg from "../../public/images/title.png";
+// import title from "../../public/images/title.png";
 import Link from 'next/link';
 import styles from "../../styles/admin.module.css";
 
@@ -54,9 +54,9 @@ const AdminDashboard = () => {
 
   return (
     <div className={styles.parentContainer}>
-      <div className={styles.pesuLogoContainer}>
-        <Image src={PESUimg} alt={"PES University"} />
-      </div>
+      {/* <div >
+        <Image src={title} alt={"logo"} />
+      </div> */}
 
         <div className={styles.signOutBtn}>
           <Link href="/api/auth/signout">Sign Out</Link>

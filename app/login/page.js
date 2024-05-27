@@ -4,7 +4,7 @@ import { getServerSession } from "next-auth/next"
 import { UserCard } from "../components/UserCard.js"
 import Link from "next/link";
 import Image from "next/image";
-import PESUimg from "../../public/images/title.png"
+// import title from "../../public/images/title.png"
 
 export default async function LoginForm() {
   const session = await getServerSession(options)
@@ -17,12 +17,7 @@ export default async function LoginForm() {
       <h1 className={styles.formHeader}>not logged in Page!</h1>
       )} */}
 
-      <div className={styles.pesuLogoContainer}>
-          <Image
-            src={PESUimg}
-            alt={"PES University" }
-          />
-      </div>
+      {/* logo container*/}
 
       <div className={styles.headerContainer}>
         <div className={styles.header}>

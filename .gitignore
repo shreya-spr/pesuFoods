@@ -26,6 +26,7 @@ yarn-error.log*
 
 # local env files
 .env*.local
+public/images/title.png
 
 # vercel
 .vercel

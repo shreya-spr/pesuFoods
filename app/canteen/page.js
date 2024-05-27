@@ -4,7 +4,7 @@ import React from 'react'
 import { useRouter } from "next/navigation"
 
 import Image from 'next/image'
-import title from "public/images/title.png"
+// import title from "public/images/title.png"
 import logo from "public/images/logo.png"
 import i1 from "public/images/caf_1.png"
 import i2 from "public/images/caf_2.png"
@@ -22,12 +22,7 @@ const Canteen = () => {
 
   return (
     <> 
-      <div className={styles.pesuLogoContainer}>
-            <Image
-                src={title}
-                alt={"PES University" }
-            />
-      </div>
+      {/* your logo*/}
 
       <div className={styles.main}>
         <div className={styles.logo}>

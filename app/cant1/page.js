@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 // import { Image } from "cloudinary-react";
 import Link from 'next/link';
-import PESUimg from "public/images/Pg3_logo.png";
+// import title from "public/images/Pg3_logo.png";
 import location from "public/images/location-96.png";
 import leaf from "public/images/leaf-96.png";
 // import foodImg from "public/images/samVeg2-removebg-preview.png";
@@ -275,7 +275,7 @@ const CartPage = ({ selectedItems, groupedItems }) => {
     ) : (
       <>
       <div className={styles.menu}>
-        <Image className={styles.pesuLogoImg} src={PESUimg} alt="PES University" />
+        {/* <Image src={title} alt="logo" /> */}
 
         <div className={styles.cafeteriaInfo}>
           <h1 className={styles.cafeteriaInfoH1}>CAFETERIA</h1>

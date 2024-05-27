@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import PESUimg from "../public/images/title.png"
+// import title from "../public/images/title.png"
 import food from "../public//images/food.png";
 import styles from "../styles/home.module.css";
 
@@ -12,12 +12,7 @@ const Home = () => {
 
   return (
     <div className={styles.mainContainer}>
-        <div className={styles.pesuLogoContainer}>
-            <Image
-                src={PESUimg}
-                alt={"PES University" }
-            />
-        </div>
+        
 
       <div className={styles.headerContainer}>
         <div id={styles.header}>

@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import styles from '../../styles/success.module.css';
 import confetti from 'canvas-confetti';
 import Image from 'next/image';
-import title from "public/images/title.png";
+// import title from "public/images/title.png";
 import logo from "public/images/logo.png";
 import Link from 'next/link';
 
@@ -20,12 +20,7 @@ const SuccessPage = () => {
 
   return (
     <>
-      <div className={styles.pesuLogoContainer}>
-        <Image
-          src={title}
-          alt={"PES University"}
-        />
-      </div>
+      {/* logo container */}
       
       <div className={styles.successContainer}>
         <h2>
